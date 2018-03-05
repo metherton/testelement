@@ -13,7 +13,7 @@
   <script>
     /**
      * `test-element`
-     * 
+     *
      *
      * @customElement
      * @polymer
@@ -28,6 +28,9 @@
             value: 'test-element'
           }
         };
+      }
+      fireEvent() {
+        this.dispatchEvent(new CustomEvent('test-event', {detail: 'tested!'}));
       }
     }
 

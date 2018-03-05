@@ -45,6 +45,15 @@
           assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
         });
 
+        test('asynchronous - fires an event', function(done) {
+          var element = fixture('BasicTestFixture');
+          element.addEventListener('test-event', function(event) {
+            assert.equal(event.detail, 'tested!');
+            done();
+          });
+          element.fireEvent();
+        });
+
       });
     </script>
 
