@@ -1,6 +1,6 @@
 <link rel="import" href="../polymer/polymer-element.html">
 
-<dom-module id="test-element">
+<dom-module id="event-element">
   <template>
     <style>
       :host {
@@ -19,13 +19,13 @@
      * @polymer
      * @demo demo/index.html
      */
-    class TestElement extends Polymer.Element {
-      static get is() { return 'test-element'; }
+    class EventElement extends Polymer.Element {
+      static get is() { return 'event-element'; }
       static get properties() {
         return {
           prop1: {
             type: String,
-            value: 'test-element'
+            value: 'event-element'
           }
         };
       }
@@ -34,6 +34,6 @@
       }
     }
 
-    window.customElements.define(TestElement.is, TestElement);
+    window.customElements.define(EventElement.is, EventElement);
   </script>
 </dom-module>
